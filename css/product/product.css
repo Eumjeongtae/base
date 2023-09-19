@@ -79,14 +79,21 @@ section.product-second-sec {
 }
 section.product-second-sec ul li {
   color: #000;
+  text-align: center;
+  cursor: pointer;
 }
 section.product-second-sec ul li figure img {
   width: 100%;
   border-radius: 50%;
+  transition: all 0.5s;
+  box-sizing: border-box;
 }
-section.product-second-sec ul li.hover {
+section.product-second-sec ul li figure img:hover {
   border: 2px solid var(--red);
 }
-section.product-second-sec ul li.active {
+section.product-second-sec ul li figure figcaption {
+  margin-top: 10px;
+}
+section.product-second-sec ul li.active img {
   border: 2px solid var(--red);
 }/*# sourceMappingURL=product.css.map */

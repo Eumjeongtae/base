@@ -7,15 +7,15 @@ let milkData = data.milk
 let iceData = data.ice
 let yogurtData = data.yogurt
 let allData = [...milkData, ...iceData, ...yogurtData]
-let swipePlay = ()=>{
+let swipePlay = () => {
   window.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('.product-second-sec', {
-  
+
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-  
+      spaceBetween: 20,
       slidesPerView: 1,
       slidesPerGroup: 1,
       breakpoints: {
@@ -36,7 +36,7 @@ let swipePlay = ()=>{
           slidesPerGroup: 10,
         },
       }
-  
+
     });
   })
 
@@ -47,13 +47,26 @@ let swipePlay = ()=>{
 console.log(category);
 
 category.forEach(v => {
+  let { category, img, name } = v
   document.querySelector('.product-second-sec ul').insertAdjacentHTML('beforeend', `
-  <li class="swiper-slide" data-name='${v.category}'>
+  <li class="swiper-slide ${category}" data-name='${category}' >
     <figure>
-      <img src='${v.img}'>
+      <img src='${img}'>
+      <figcaption>
+        ${name}
+      </figcaption>
     </fugure>
   </li>
   `)
+  document.querySelector('.all-category').classList.add("active");
+
+})
+
+document.querySelectorAll('.product-second-sec li').forEach(v => {
+  v.addEventListener('click', e => {
+    document.querySelector('.product-second-sec li').classList.remove("active")
+    e.currentTarget.classList.add("active")
+  })
 })
 
 swipePlay()

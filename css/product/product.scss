@@ -1,5 +1,4 @@
 @use "../mixin.scss" as m;
-
 section.product-first-sec {
   width: min(60%, 1000px);
   margin: 0 auto;
@@ -76,16 +75,26 @@ section.product-second-sec {
   ul {
     li {
       color: #000;
+      text-align: center;
+      cursor: pointer;
+
+
+
       figure {
         img {
           width: 100%;
           border-radius: 50%;
+          transition: all 0.5s;
+          box-sizing: border-box;
+          &:hover {
+            border: 2px solid var(--red);
+          }
+        }
+        figcaption{
+          margin-top: 10px
         }
       }
-      &.hover {
-        border: 2px solid var(--red);
-      }
-      &.active {
+      &.active img {
         border: 2px solid var(--red);
       }
     }
