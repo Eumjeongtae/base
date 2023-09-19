@@ -9,6 +9,12 @@
       <button type="button">SEARCH</button>
     </div>
   </section>
+  
+  <section class="product-second-sec">
+    <ul class="swiper-wrapper">
+    </ul>
+
+  </section>
 </main>
 
 <?php include "footer.php" ?>

@@ -1,49 +1,92 @@
 @use "../mixin.scss" as m;
 
-main.product-main {
-  width: min(80%,1400px);
+section.product-first-sec {
+  width: min(60%, 1000px);
   margin: 0 auto;
   border: solid 1px #ececee;
   background: #fff;
   padding: 5%;
   border-radius: 50px;
-  section.product-first-sec {
-    h3 {
-      color: #000;
-      font-size: 22px;
-      font-weight: 500;
-      text-align: center;
-      margin-bottom: 30px;
+  @media #{m.$max-lg} {
+    width: 90%;
+  }
+  h3 {
+    color: #000;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .product-search {
+    height: 80px;
+    border-radius: 40px;
+    box-shadow: 0 0 20px #c4c4c4;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    i {
+      font-size: 20px;
+      padding-left: 5%;
     }
-
-    .product-search {
-      height: 80px;
-      border-radius: 40px;
-      box-shadow: 0 0 20px #c4c4c4;
-      color:#000;
-
-      i {
-      }
+    input {
+      width: 78%;
+      height: 100%;
+      padding-left: 10px;
+      font-size: 17px;
+      letter-spacing: -0.85px;
+      text-align: left;
+      border: none;
+      box-sizing: border-box;
+      border-radius: 50%;
+      outline: none;
+    }
+    input::placeholder {
+      color: #c4c4c4;
+    }
+    button {
+      @include m.button(#fff, var(--red));
+      padding: 17px 60px;
+      margin-right: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 25px;
+    }
+    @media #{m.$max-lg} {
+      height: 50px;
+      border-radius: 25px;
       input {
-        width: 78%;
-        height: 100%;
-        padding-left: 5%;
-        font-size: 17px;
-        letter-spacing: -0.85px;
-        text-align: left;
-        border: none;
-        box-sizing: border-box;
-        border-radius: 50%;
-        outline: none;
-        
+        font-size: 14px;
       }
       button {
-        top: 0; right: 0;
-        @include m.button(#fff, var(--red));
-        padding: 10px 50px;
-        font-size: 14px;
-        font-weight: 500;
-        border-radius: 25px;
+        padding: 9px 34px;
+        margin-right: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+section.product-second-sec {
+  width: min(60%, 1200px);
+  margin: 0 auto;
+
+  ul {
+    li {
+      color: #000;
+      figure {
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      &.hover {
+        border: 2px solid var(--red);
+      }
+      &.active {
+        border: 2px solid var(--red);
       }
     }
   }

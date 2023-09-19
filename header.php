@@ -18,7 +18,7 @@
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script type="module" src="./js/common.js"></script>
-  <title>tmdb</title>
+  <title>빙그레</title>
 </head>
 
 <body>
