@@ -45,18 +45,11 @@ $md: "screen and (min-width:500px) and (max-width:1000px)";
   text-overflow: ellipsis;
 }
 
-// @mixin button($color1, $border-color1, $bg-color1, $color2, $border-color2, $bg-color2) {
-//   padding: 7px 30px;
-//   transition: all 0.5s;
-//   color: $color1;
-//   border: 1px solid $border-color1;
-//   background-color: $bg-color1;
-//   &:hover {
-//     color: $color2;
-//     border: 1px solid $border-color2;
-//     background-color: $bg-color2;
-//   }
-// }
+@mixin button($color1, $bg-color1) {
+  // padding: 7px 30px;
+  color: $color1;
+  background-color: $bg-color1;
+}
 
 @mixin cover{
   width: 100%;

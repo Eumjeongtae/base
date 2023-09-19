@@ -1,5 +1,12 @@
 @use "./mixin" as m;
 
+@font-face {
+  font-family: 'Binggrae-Two';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
   color: #fff;
@@ -15,7 +22,11 @@ body {
   font-family: "Nanum Myeongjo", serif;
 }
 :root {
-  // --sky: #03b3e4;
-  // --green: #8ccda2;
-  // --navy: #091a38;
+  --red: #ed1c24;
+  --red-dark: #e0462e;
+  --l-gray: #f9f9f9;
+}
+h2{
+  font-family: 'Binggrae-Two';
+  color: #000;
 }
