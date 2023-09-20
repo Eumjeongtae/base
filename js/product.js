@@ -65,7 +65,7 @@ document.querySelectorAll('.product-second-sec li').forEach(v => {
     })
 
     document.querySelectorAll('.product-list li').forEach(v => {
-      v.style.display = 'none';
+      v.style.display = 'none'; // active로 바꾸기
     })
 
     document.querySelectorAll(`.product-list li.${tab.getAttribute('data-name')}`).forEach(v => {
