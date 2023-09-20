@@ -1,10 +1,11 @@
 section.product-first-sec {
-  width: min(60%, 1000px);
+  width: min(70%, 1200px);
   margin: 0 auto;
   border: solid 1px #ececee;
   background: #fff;
   padding: 5%;
   border-radius: 50px;
+  box-sizing: border-box;
 }
 @media screen and (max-width:1000px) {
   section.product-first-sec {
@@ -74,26 +75,157 @@ section.product-first-sec .product-search button {
 }
 
 section.product-second-sec {
+  position: relative;
   width: min(60%, 1200px);
   margin: 0 auto;
+  padding: 7% 0;
 }
-section.product-second-sec ul li {
+section.product-second-sec div {
+  overflow: hidden;
+}
+section.product-second-sec div ul li {
   color: #000;
   text-align: center;
   cursor: pointer;
 }
-section.product-second-sec ul li figure img {
+section.product-second-sec div ul li.non-click {
+  pointer-events: none;
+}
+section.product-second-sec div ul li figure {
+  height: 100%;
+}
+section.product-second-sec div ul li figure img {
+  margin: 0 auto;
   width: 100%;
   border-radius: 50%;
-  transition: all 0.5s;
   box-sizing: border-box;
+  transition: 0.5s all ease;
 }
-section.product-second-sec ul li figure img:hover {
+section.product-second-sec div ul li figure img:hover {
   border: 2px solid var(--red);
 }
-section.product-second-sec ul li figure figcaption {
+section.product-second-sec div ul li figure figcaption {
   margin-top: 10px;
 }
-section.product-second-sec ul li.active img {
+section.product-second-sec div ul li.active img {
   border: 2px solid var(--red);
+}
+section.product-second-sec .button-next,
+section.product-second-sec .button-prev {
+  z-index: 15;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.product-second-sec .button-next i,
+section.product-second-sec .button-prev i {
+  font-size: 20px;
+  color: #1f1f1f;
+}
+@media screen and (max-width:1400px) {
+  section.product-second-sec .button-next,
+  section.product-second-sec .button-prev {
+    display: block;
+  }
+}
+section.product-second-sec .button-next {
+  right: -7%;
+}
+section.product-second-sec .button-prev {
+  left: -7%;
+}
+
+section.product-third-sec {
+  width: min(70%, 1200px);
+  margin: 0 auto;
+}
+@media screen and (max-width:1000px) {
+  section.product-third-sec {
+    width: 90%;
+  }
+}
+section.product-third-sec h4 {
+  font-family: "Binggrae-Two";
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: -1.03px;
+  color: #1f1f1f;
+  padding-bottom: 5%;
+}
+section.product-third-sec .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 8%;
+}
+section.product-third-sec .product-list li {
+  width: 23%;
+  height: 17vw;
+  cursor: pointer;
+  margin-bottom: 6%;
+}
+section.product-third-sec .product-list li figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 23px;
+  box-sizing: border-box;
+  border: solid 1px #ececee;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+section.product-third-sec .product-list li figure span {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 4px 12px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  color: #1f1f1f;
+}
+section.product-third-sec .product-list li figure span::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 4px;
+  background-color: var(--red);
+  border-radius: 50%;
+}
+section.product-third-sec .product-list li figure:hover {
+  box-shadow: 0 0 15px #a8a8a8;
+}
+section.product-third-sec .product-list li figure:hover button {
+  transform: translate(-50%, 0%);
+}
+section.product-third-sec .product-list li figure img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+}
+section.product-third-sec .product-list li figure button {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%, 200%);
+  color: #fff;
+  background-color: var(--red);
+  padding: 10px 0;
+  width: 90%;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 25px;
+  transition: all 0.5s;
+}
+section.product-third-sec .product-list li p {
+  padding-top: 15px;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  color: #1f1f1f;
 }/*# sourceMappingURL=product.css.map */

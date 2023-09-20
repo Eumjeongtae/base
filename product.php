@@ -9,12 +9,24 @@
       <button type="button">SEARCH</button>
     </div>
   </section>
-  
+
   <section class="product-second-sec">
-    <ul class="swiper-wrapper">
-    </ul>
+    <div>
+      <ul class="swiper-wrapper">
+      </ul>
+      <div class="button-prev"><i class="fa-solid fa-angle-left"></i></div>
+      <div class="button-next"><i class="fa-solid fa-angle-right"></i></div>
+    </div>
 
   </section>
+
+  <section class="product-third-sec">
+    <h4 class="product-num">전체상품</h4>
+    <ul class="product-list">
+      
+    </ul>
+  </section>
+
 </main>
 
 <?php include "footer.php" ?>

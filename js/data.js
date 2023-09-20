@@ -11,7 +11,7 @@ export const data =
     txt1: '상품1 서브타이틀1의 설명입니다.',
     txt2: '상품1 서브타이틀1의 설명입니다.',
     txt3: '상품1 서브타이틀1의 설명입니다.',
-    img: 'https://www.bing.co.kr/upload/brand/2022/12/427a8082-c5ab-4d5c-bd6b-67f1ab799c19.png'
+    img: 'https://www.bing.co.kr/upload/brand/2022/12/56603b6e-6d08-4400-b8a0-bc0c75fb3f07.png'
   },
   {
     id: 2,

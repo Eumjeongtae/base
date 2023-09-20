@@ -9,27 +9,20 @@ let yogurtData = data.yogurt
 let allData = [...milkData, ...iceData, ...yogurtData]
 let swipePlay = () => {
   window.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.product-second-sec', {
+    const swiper = new Swiper('.product-second-sec div', {
 
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
       },
       spaceBetween: 20,
-      slidesPerView: 1,
+      slidesPerView: 3,
       slidesPerGroup: 1,
       breakpoints: {
-        500: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-        },
+
         1000: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-        },
-        1200: {
-          slidesPerView: 4,
-          slidesPerGroup: 4,
+          slidesPerView: 6,
+          slidesPerGroup: 1,
         },
         1400: {
           slidesPerView: 10,
@@ -44,13 +37,13 @@ let swipePlay = () => {
 
 
 
-console.log(category);
 
 category.forEach(v => {
   let { category, img, name } = v
-  document.querySelector('.product-second-sec ul').insertAdjacentHTML('beforeend', `
+  document.querySelector('.product-second-sec div ul').insertAdjacentHTML('beforeend', `
   <li class="swiper-slide ${category}" data-name='${category}' >
     <figure>
+    
       <img src='${img}'>
       <figcaption>
         ${name}
@@ -64,10 +57,52 @@ category.forEach(v => {
 
 document.querySelectorAll('.product-second-sec li').forEach(v => {
   v.addEventListener('click', e => {
-    document.querySelector('.product-second-sec li').classList.remove("active")
-    e.currentTarget.classList.add("active")
+
+    let tab = e.currentTarget;
+    console.log(tab.getAttribute('data-name'));
+    document.querySelectorAll('.product-second-sec li').forEach(li => {
+      li.classList.remove('active')
+    })
+
+    document.querySelectorAll('.product-list li').forEach(v => {
+      v.style.display = 'none';
+    })
+
+    document.querySelectorAll(`.product-list li.${tab.getAttribute('data-name')}`).forEach(v => {
+      v.style.display = 'block';
+    })
+
+    tab.classList.add("active")
+
   })
 })
+document.querySelector('.product-second-sec li.all-category').addEventListener('click', e => {
+  document.querySelectorAll('.product-list li').forEach(v => {
+    v.style.display = 'block';
+  })
+})
+
+
+
+
+allData.forEach(v => {
+  document.querySelector('.product-list').insertAdjacentHTML('beforeend', `
+  <li class=${v.category}>
+    <figure>
+      <img src=${v.img}>
+      <button type="button">더보기</button>
+      <span>${v.name}</span>
+    </figure>
+    <p>
+      ${v.name}
+    </p>
+  </li>
+
+  `)
+})
+
+
+document.querySelector('.product-num').innerHTML = `전체상품 (${document.querySelectorAll('.product-list li').length})`
 
 swipePlay()
 
