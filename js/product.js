@@ -2,7 +2,6 @@ import { category, data } from "./data.js";
 let url = new URL(location.href)
 let params = new URLSearchParams(url.search)
 let id = params.get('id')
-// id = icd ,milk ,yogurt
 let milkData = data.milk
 let iceData = data.ice
 let yogurtData = data.yogurt
@@ -34,6 +33,55 @@ let swipePlay = () => {
   })
 
 }
+//./product.php?id=ice
+//./product.php?id=yogurt
+//./product.php?id=milk
+//./product.php?id=all-category
+let productOn = () => {
+  document.querySelectorAll('.product-second-sec li').forEach(v => {
+    v.addEventListener('click', e => {
+
+      let tab = e.currentTarget;
+      document.querySelectorAll('.product-second-sec li').forEach(li => {
+        li.classList.remove('active')
+      })
+
+      tab.classList.add("active")
+
+      document.querySelectorAll('.product-list li').forEach(v => {
+        v.classList.remove('active')
+      })
+
+      document.querySelectorAll(`.product-list li.${tab.getAttribute('data-name')}`).forEach(v => {
+        v.classList.add('active')
+      })
+
+      if (tab.getAttribute('data-name') == 'all-category') {
+        document.querySelectorAll('.product-list li').forEach(v => {
+          v.classList.add('active')
+        })
+        
+      }
+    })
+
+  })
+
+  document.querySelectorAll(`.product-list li.${id}`).forEach(v => {
+    v.classList.add('active')
+  })
+
+  if (id == 'all-category') {
+    document.querySelectorAll('.product-list li').forEach(v => {
+      v.classList.add('active')
+    })
+  }
+}
+let categoryOn = () => {
+  document.querySelector(`.product-second-sec li.${id}`).classList.add('active')
+}
+
+
+
 
 
 
@@ -51,36 +99,14 @@ category.forEach(v => {
     </fugure>
   </li>
   `)
-  document.querySelector('.all-category').classList.add("active");
+  // document.querySelector('.all-category').classList.add("active");
 
 })
 
-document.querySelectorAll('.product-second-sec li').forEach(v => {
-  v.addEventListener('click', e => {
 
-    let tab = e.currentTarget;
-    console.log(tab.getAttribute('data-name'));
-    document.querySelectorAll('.product-second-sec li').forEach(li => {
-      li.classList.remove('active')
-    })
-
-    document.querySelectorAll('.product-list li').forEach(v => {
-      v.style.display = 'none'; // active로 바꾸기
-    })
-
-    document.querySelectorAll(`.product-list li.${tab.getAttribute('data-name')}`).forEach(v => {
-      v.style.display = 'block';
-    })
-
-    tab.classList.add("active")
-
-  })
-})
-document.querySelector('.product-second-sec li.all-category').addEventListener('click', e => {
-  document.querySelectorAll('.product-list li').forEach(v => {
-    v.style.display = 'block';
-  })
-})
+// document.querySelector('.product-second-sec li.all-category').addEventListener('click', e => {
+//   categoryOn()
+// })
 
 
 
@@ -104,5 +130,7 @@ allData.forEach(v => {
 
 document.querySelector('.product-num').innerHTML = `전체상품 (${document.querySelectorAll('.product-list li').length})`
 
+productOn()
+categoryOn()
 swipePlay()
 

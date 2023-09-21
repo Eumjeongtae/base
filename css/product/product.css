@@ -99,7 +99,7 @@ section.product-second-sec div ul li figure img {
   width: 100%;
   border-radius: 50%;
   box-sizing: border-box;
-  transition: 0.5s all ease;
+  border: 0px solid var(--red);
 }
 section.product-second-sec div ul li figure img:hover {
   border: 2px solid var(--red);
@@ -160,10 +160,14 @@ section.product-third-sec .product-list {
   padding-bottom: 8%;
 }
 section.product-third-sec .product-list li {
+  display: none;
   width: 23%;
   height: 17vw;
   cursor: pointer;
   margin-bottom: 6%;
+}
+section.product-third-sec .product-list li.active {
+  display: block;
 }
 section.product-third-sec .product-list li figure {
   position: relative;

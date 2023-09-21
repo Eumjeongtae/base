@@ -94,7 +94,8 @@ section.product-second-sec {
             width: 100%;
             border-radius: 50%;
             box-sizing: border-box;
-            transition: 0.5s all ease;
+            // transition: .5s border ease;
+            border:  0px solid var(--red);
             &:hover {
               border: 2px solid var(--red);
             }
@@ -155,11 +156,14 @@ section.product-third-sec {
     justify-content: space-between;
     padding-bottom: 8%;
     li {
+      display: none;
       width: 23%;
       height: 17vw;
       cursor: pointer;
       margin-bottom: 6%;
-
+      &.active{
+        display: block;
+      }
       figure {
         position: relative;
         width: 100%;
