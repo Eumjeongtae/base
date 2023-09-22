@@ -146,7 +146,6 @@ category.forEach(v => {
 
 
 
-document.querySelector('.product-num').innerHTML = `전체상품 (${document.querySelectorAll('.product-list li').length})`
 
 categoryOn()
 swipePlay()
@@ -161,5 +160,6 @@ productOn()
 
 
 
+document.querySelector('.product-num').innerHTML = `전체상품 (${document.querySelectorAll('.product-list li.active').length})`
 
 
