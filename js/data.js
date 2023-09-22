@@ -2,7 +2,7 @@ export const data =
 {
   milk: [{
     id: 1,
-    name: '상품1',
+    name: '바나나맛우유',
     category: 'milk',
     title: '상품1 대표 타이틀입니다.',
     subTitle1: '상품1 서브타이틀1번 입니다.',
@@ -15,7 +15,7 @@ export const data =
   },
   {
     id: 2,
-    name: '상품2',
+    name: '바나나맛우유 MiNi',
     category: 'milk',
     title: '상품2 대표 타이틀입니다.',
     subTitle1: '상품2 서브타이틀1번 입니다.',
@@ -28,7 +28,7 @@ export const data =
   },
   {
     id: 3,
-    name: '상품3',
+    name: '타임가공유',
     category: 'milk',
     title: '상품3 대표 타이틀입니다.',
     subTitle1: '상품3 서브타이틀1번 입니다.',
@@ -41,7 +41,7 @@ export const data =
   },
   {
     id: 4,
-    name: '상품4',
+    name: '굿모닝우유',
     category: 'milk',
     title: '상품4 대표 타이틀입니다.',
     subTitle1: '상품4 서브타이틀1번 입니다.',
@@ -55,7 +55,7 @@ export const data =
 
   ice: [{
     id: 5,
-    name: '상품5',
+    name: '그라시아',
     category: 'ice',
     title: '상품5 대표 타이틀입니다.',
     subTitle1: '상품5 서브타이틀1번 입니다.',
@@ -68,7 +68,7 @@ export const data =
   },
   {
     id: 6,
-    name: '상품6',
+    name: '메로나',
     category: 'ice',
     title: '상품6 대표 타이틀입니다.',
     subTitle1: '상품6 서브타이틀1번 입니다.',
@@ -81,7 +81,7 @@ export const data =
   },
   {
     id: 7,
-    name: '상품7',
+    name: '투게더',
     category: 'ice',
     title: '상품7 대표 타이틀입니다.',
     subTitle1: '상품7 서브타이틀1번 입니다.',
@@ -94,7 +94,7 @@ export const data =
   },
   {
     id: 8,
-    name: '상품8',
+    name: '빵또아',
     category: 'ice',
     title: '상품8 대표 타이틀입니다.',
     subTitle1: '상품8 서브타이틀1번 입니다.',
@@ -109,7 +109,7 @@ export const data =
   ,
   yogurt: [{
     id: 9,
-    name: '상품9',
+    name: '요플레',
     category: 'yogurt',
     title: '상품9 대표 타이틀입니다.',
     subTitle1: '상품9 서브타이틀1번 입니다.',
@@ -122,7 +122,7 @@ export const data =
   },
   {
     id: 10,
-    name: '상품10',
+    name: '쥬시쿨',
     category: 'yogurt',
     title: '상품10 대표 타이틀입니다.',
     subTitle1: '상품10 서브타이틀1번 입니다.',
@@ -135,7 +135,7 @@ export const data =
   },
   {
     id: 11,
-    name: '상품11',
+    name: '바이오플레',
     category: 'yogurt',
     title: '상품11 대표 타이틀입니다.',
     subTitle1: '상품11 서브타이틀1번 입니다.',
@@ -148,7 +148,7 @@ export const data =
   },
   {
     id: 12,
-    name: '상품12',
+    name: '요구르트',
     category: 'yogurt',
     title: '상품12 대표 타이틀입니다.',
     subTitle1: '상품12 서브타이틀1번 입니다.',

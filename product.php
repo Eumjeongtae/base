@@ -5,8 +5,8 @@
     <h3>빙그레의 브랜드 / 제품 / 맛을 검색해 보세요.</h3>
     <div class="product-search">
       <i class="fa-solid fa-magnifying-glass"></i>
-      <input id="search-btn" type="text" placeholder="검색어를 입력해 주세요">
-      <button type="button">SEARCH</button>
+      <input  type="text" id="searchText" placeholder="검색어를 입력해 주세요">
+      <button type="button" id="search-btn">SEARCH</button>
     </div>
   </section>
 

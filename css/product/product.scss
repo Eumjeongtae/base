@@ -151,13 +151,13 @@ section.product-third-sec {
     padding-bottom: 5%;
   }
   .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+ 
     padding-bottom: 8%;
     li {
       display: none;
+      float: left;
       width: 23%;
+      margin: 0 1%;
       height: 17vw;
       cursor: pointer;
       margin-bottom: 6%;
